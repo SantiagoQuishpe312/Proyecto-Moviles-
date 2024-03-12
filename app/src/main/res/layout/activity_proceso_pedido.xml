@@ -24,7 +24,7 @@
             android:width="@dimen/cardview_default_radius"
             android:text="Tu pedido esta siendo preparado"
 
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -39,6 +39,21 @@
             android:layout_height="316dp"
             android:scaleType="fitXY"
             android:src="@drawable/pedido" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="118dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHome"
+            style="@android:style/Widget.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_button_bg"
+            android:text="Seguir comprando"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,10 +38,20 @@
             android:id="@+id/map"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="306dp"
-            map:cameraZoom="10"
+            android:layout_height="310dp"
+            map:cameraZoom="15"
             map:uiRotateGestures="true"
             map:uiZoomControls="true" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:text="Verifica tu Ubicación"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAceptar1"
             style="@android:style/Widget.Button"
