@@ -1,5 +1,6 @@
 package com.example.project1752.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,7 +21,10 @@ public class CartActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityCartBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        binding.checkOutBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(this, DireccionActivity.class);
+            startActivity(intent);
+        });
         managmentCart = new ManagmentCart(this);
 
         calculatorCart();
@@ -47,11 +51,11 @@ public class CartActivity extends BaseActivity {
 
     private void calculatorCart() {
         double percentTax = 0.02;
-        double delivery = 10;
-        tax = Math.round((managmentCart.getTotalFee() * percentTax * 100.0)) / 100.0;
+        double delivery = 2.00;
+        tax = ((managmentCart.getTotalFee() * percentTax * 100.0)) / 100.0;
 
-        double total = Math.round((managmentCart.getTotalFee() + tax + delivery) * 100) / 100;
-        double itemTotal = Math.round(managmentCart.getTotalFee() * 100) / 100;
+        double total = ((managmentCart.getTotalFee() + tax + delivery) * 100) / 100;
+        double itemTotal =(managmentCart.getTotalFee() * 100) / 100;
 
         binding.totalFeeTxt.setText("$" + itemTotal);
         binding.taxTxt.setText("$" + tax);

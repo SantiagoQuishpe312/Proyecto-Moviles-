@@ -47,6 +47,7 @@ public class DetailActivity extends BaseActivity {
 
     private void initSize() {
         ArrayList<String> list = new ArrayList<>();
+        list.add("XS");
         list.add("S");
         list.add("M");
         list.add("L");
@@ -101,9 +102,9 @@ public class DetailActivity extends BaseActivity {
         tab2.setArguments(bundle2);
         tab3.setArguments(bundle3);
 
-        adapter.addFrag(tab1,"Descriptions");
-        adapter.addFrag(tab2,"Reviews");
-        adapter.addFrag(tab3,"Sold");
+        adapter.addFrag(tab1,"Descripción");
+        //adapter.addFrag(tab2,"Reviews");
+        adapter.addFrag(tab3,"Ventas");
 
         binding.viewpager.setAdapter(adapter);
         binding.tabLayout.setupWithViewPager(binding.viewpager);
