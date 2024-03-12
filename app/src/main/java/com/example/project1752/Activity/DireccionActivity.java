@@ -9,14 +9,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
-import android.content.Context;
 import android.graphics.Color;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -26,7 +20,7 @@ import androidx.core.app.NotificationManagerCompat;
 import java.util.Random;
 
 public class DireccionActivity extends AppCompatActivity {
-    private Button btnAceptar;
+    private Button btnAceptar,btnMap;
     private static final String CHANNEL_ID = "channel_id";
     private static final int NOTIFICATION_ID = 1;
 
@@ -35,13 +29,20 @@ public class DireccionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_direccion);
-        btnAceptar = findViewById(R.id.btnAceptar);
+        btnAceptar = findViewById(R.id.btnAceptar1);
         crearCanal();
         btnAceptar.setOnClickListener(v -> {
             Intent intent = new Intent(DireccionActivity.this, ProcesoPedidoActivity.class);
             startActivity(intent);
             crearNotificacion();
         });
+
+        btnMap=findViewById(R.id.btnUbicacion);
+        btnMap.setOnClickListener(v -> {
+            Intent intent = new Intent(DireccionActivity.this, MapActivity.class);
+            startActivity(intent);
+        });
+
     }
 
     @SuppressLint("MissingPermission")
