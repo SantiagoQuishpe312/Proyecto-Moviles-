@@ -70,40 +70,6 @@
                 android:layout_height="match_parent"
                 android:layout_margin="16dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/grey_background2"
-                android:orientation="horizontal"
-                android:padding="4dp">
-
-                <EditText
-                    android:id="@+id/editTextText2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:background="#00ffffff"
-                    android:ems="10"
-                    android:hint="Ingresa el código de tu cupón"
-                    android:inputType="text"
-                    android:paddingStart="8dp"
-                    android:textSize="14sp" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/button"
-                    style="@android:style/Widget.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="38dp"
-                    android:layout_weight="1"
-                    android:background="@drawable/green_button_bg"
-                    android:text="Aplicar"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-            </LinearLayout>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
