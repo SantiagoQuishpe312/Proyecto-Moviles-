@@ -104,7 +104,7 @@ public class MainActivity extends BaseActivity {
 
     private void initBanner() {
         DatabaseReference myRef = database.getReference("Banner");
-        binding.progressBarBanner.setVisibility(View.VISIBLE);
+        //binding.progressBarBanner.setVisibility(View.VISIBLE);
         ArrayList<SliderItems> items = new ArrayList<>();
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -114,7 +114,7 @@ public class MainActivity extends BaseActivity {
                         items.add(issue.getValue(SliderItems.class));
                     }
                     banners(items);
-                    binding.progressBarBanner.setVisibility(View.GONE);
+                   // binding.progressBarBanner.setVisibility(View.GONE);
                 }
             }
 
@@ -128,15 +128,15 @@ public class MainActivity extends BaseActivity {
 
     private void banners(ArrayList<SliderItems> items) {
 
-        binding.viewpagerSlider.setAdapter(new SliderAdapter(items, binding.viewpagerSlider));
-        binding.viewpagerSlider.setClipToPadding(false);
-        binding.viewpagerSlider.setClipChildren(false);
-        binding.viewpagerSlider.setOffscreenPageLimit(3);
-        binding.viewpagerSlider.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
+       // binding.viewpagerSlider.setAdapter(new SliderAdapter(items, binding.viewpagerSlider));
+       // binding.viewpagerSlider.setClipToPadding(false);
+      //  binding.viewpagerSlider.setClipChildren(false);
+    //    binding.viewpagerSlider.setOffscreenPageLimit(3);
+    //    binding.viewpagerSlider.getChildAt(0).setOverScrollMode(RecyclerView.OVER_SCROLL_NEVER);
 
         CompositePageTransformer compositePageTransformer = new CompositePageTransformer();
         compositePageTransformer.addTransformer(new MarginPageTransformer(40));
 
-        binding.viewpagerSlider.setPageTransformer(compositePageTransformer);
+       // binding.viewpagerSlider.setPageTransformer(compositePageTransformer);
     }
 }
